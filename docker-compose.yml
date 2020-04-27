@@ -1,0 +1,23 @@
+version: '3'
+services:
+  accoumt-manager-app:
+    container_name: accoumt-manager-app
+    image: aaron/account-manager-app
+    restart: always
+    build: .
+    ports:
+      - '5668:5668'
+    links:
+      - postgres
+    environment:
+      - PORT=5668
+      - POSTGRES_URI=postgres://postgres:postgres@postgres:5432/postgres?min=1&max=10
+  postgres:
+    container_name: postgres
+    image: postgres
+    volumes:
+      - ./data:/data/db
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_PASSWORD=postgres

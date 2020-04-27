@@ -1,0 +1,30 @@
+{
+  "name": "account-manager",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Aaron Yang <craaron102@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "express-session": "^1.16.1",
+    "joi": "^14.3.1",
+    "lodash": "^4.17.11",
+    "pg": "^7.10.0",
+    "pg-connection-string": "^2.0.0",
+    "postgres-migrations": "^3.0.2",
+    "sequelize": "^5.7.5",
+    "sequelize-cli": "^5.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.11"
+  }
+}
